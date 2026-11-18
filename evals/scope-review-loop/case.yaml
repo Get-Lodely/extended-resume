@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: scope-review-loop
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  The scope is proposed from metadata only, shown, revised with the person's two changes (Desktop excluded,
+  notes.docx included) and re-rendered before freezing. Extraction reads only the approved list, and
+  nothing in the run reads original files directly.

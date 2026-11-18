@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "about": "The only places extended-resume will look. Anything not listed here is never read unless the person adds a folder by name. Paths use ~ for the home folder and %APPDATA% on Windows.",
+  "sources": [
+    {
+      "id": "documents",
+      "label": "Documents folder",
+      "adapter": "walk",
+      "default": true,
+      "strict": true,
+      "max_depth": 6,
+      "paths": {"darwin": ["~/Documents"], "linux": ["$XDG_DOCUMENTS_DIR", "~/Documents"], "win32": ["~/Documents", "~/OneDrive/Documents"]},
+      "why": "Where most people keep work documents. Strict: a file is read only if it is positively identified as career material."
+    },
+    {
+      "id": "desktop",
+      "label": "Desktop",
+      "adapter": "walk",
+      "default": true,
+      "strict": true,
+      "max_depth": 3,
+      "paths": {"darwin": ["~/Desktop"], "linux": ["$XDG_DESKTOP_DIR", "~/Desktop"], "win32": ["~/Desktop", "~/OneDrive/Desktop"]},
+      "why": "Recent working files often sit here. Strict, like Documents."
+    },
+    {
+      "id": "downloads",
+      "label": "Downloads",
+      "adapter": "walk",
+      "default": true,
+      "strict": true,
+      "max_depth": 2,
+      "paths": {"darwin": ["~/Downloads"], "linux": ["$XDG_DOWNLOAD_DIR", "~/Downloads"], "win32": ["~/Downloads"]},
+      "why": "Resumes, exported reviews and shared docs land here, mixed with a lot of other people's files. Strict."
+    },
+    {
+      "id": "obsidian",
+      "label": "Obsidian vaults",
+      "adapter": "obsidian",
+      "default": true,
+      "registry": {
+        "darwin": ["~/Library/Application Support/obsidian/obsidian.json"],
+        "linux": ["~/.config/obsidian/obsidian.json", "~/.var/app/md.obsidian.Obsidian/config/obsidian/obsidian.json", "~/snap/obsidian/current/.config/obsidian/obsidian.json"],
+        "win32": ["%APPDATA%/obsidian/obsidian.json"]
+      },
+      "why": "Your own notes. Vaults are found from Obsidian's own vault list, wherever they live."
+    },
+    {
+      "id": "logseq",
+      "label": "Logseq graphs",
+      "adapter": "logseq",
+      "default": true,
+      "registry": {"all": ["~/.logseq/graphs"]},
+      "why": "Your own notes and journals (pages/ and journals/ only)."
+    },
+    {
+      "id": "notes-folders",
+      "label": "Notes folders",
+      "adapter": "walk",
+      "default": true,
+      "max_depth": 6,
+      "paths": {"all": ["~/Notes", "~/notes"]},
+      "why": "Plain-text note folders kept in your home folder."
+    },
+    {
+      "id": "apple-notes",
+      "label": "Apple Notes",
+      "adapter": "apple-notes",
+      "default": false,
+      "platforms": ["darwin"],
+      "why": "Often mixes work and personal life, and macOS asks for permission to read it. You can limit it to named folders."
+    },
+    {
+      "id": "notion",
+      "label": "Notion (desktop app cache)",
+      "adapter": "notion-cache",
+      "default": false,
+      "paths": {"darwin": ["~/Library/Application Support/Notion/notion.db"], "win32": ["%APPDATA%/Notion/notion.db"], "linux": ["~/.config/Notion/notion.db"]},
+      "why": "Read locally from the Notion desktop app's cache (read-only). Only pages synced to this device are there; a full workspace export zip can be added as a folder instead."
+    },
+    {
+      "id": "onenote",
+      "label": "OneNote (Windows desktop app)",
+      "adapter": "onenote-com",
+      "default": false,
+      "platforms": ["win32"],
+      "why": "Read through the OneNote desktop app (it must be open). On Mac, use an export or a connector instead."
+    },
+    {
+      "id": "bear",
+      "label": "Bear",
+      "adapter": "bear",
+      "default": false,
+      "platforms": ["darwin"],
+      "paths": {"darwin": ["~/Library/Group Containers/9K33E3U3T4.net.shinyfrog.bear/Application Data/database.sqlite"]},
+      "why": "Personal notes app; macOS may ask for permission to read another app's data."
+    },
+    {
+      "id": "joplin",
+      "label": "Joplin",
+      "adapter": "joplin",
+      "default": false,
+      "paths": {"all": ["~/.config/joplin-desktop/database.sqlite"]},
+      "why": "Personal notes app database (read-only)."
+    },
+    {
+      "id": "icloud-drive",
+      "label": "iCloud Drive",
+      "adapter": "walk",
+      "default": false,
+      "strict": true,
+      "max_depth": 6,
+      "platforms": ["darwin"],
+      "paths": {"darwin": ["~/Library/Mobile Documents/com~apple~CloudDocs"]},
+      "why": "Large personal drive; files that are only in the cloud are listed but not downloaded during scoping."
+    },
+    {
+      "id": "cloud-drives",
+      "label": "Cloud drives",
+      "adapter": "walk",
+      "default": false,
+      "strict": true,
+      "max_depth": 6,
+      "expand_each": true,
+      "paths": {
+        "darwin": ["~/Library/CloudStorage/*"],
+        "linux": ["~/Dropbox", "~/Nextcloud", "~/Google Drive", "~/Box"],
+        "win32": ["~/OneDrive*", "~/Dropbox", "~/Google Drive", "~/Box", "~/iCloudDrive"]
+      },
+      "why": "Google Drive, OneDrive, Dropbox, Box and similar. Each drive can be switched on separately."
+    },
+    {
+      "id": "connectors",
+      "label": "Connectors attached to your agent",
+      "adapter": "connector",
+      "default": false,
+      "why": "Notion, Google Drive or Microsoft 365 connectors, if your agent has them. Searched by title first; pages are fetched only after you approve them."
+    }
+  ],
+  "custom_source": {
+    "adapter": "walk",
+    "strict": true,
+    "max_depth": 8,
+    "why": "A folder you added by name."
+  },
+  "never_listed": [
+    "password managers and their exports",
+    "keychains, ~/.ssh, ~/.gnupg, cloud credentials",
+    "browser profiles, Mail and Messages stores",
+    "photo, music and video libraries",
+    "system and application folders (Library, AppData, Applications)"
+  ]
+}

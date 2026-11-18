@@ -1,0 +1,6 @@
+interface:
+  display_name: "Extended Resume"
+  short_description: "Mine your own notes into a deep resume and grounded behavioral interview answers"
+  default_prompt: "Build my extended resume from my notes and documents, then answer the top behavioral interview questions from it."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: question-list-management
+expected_outcome: |
+  Built-in questions in the paste are recognized as already covered. The two disagreement questions are
+  treated as the existing conflict question (variants or not added), not as new stories. The mentoring
+  and learn-a-new-technology questions are added. The Stripe and Google questions are recognized as
+  company-specific, and the agent says they need company context.

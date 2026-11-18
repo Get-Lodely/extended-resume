@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: full-build-from-notes
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  The skill detects sources, catalogs metadata, writes scope decisions, renders scope.md and only then
+  freezes and extracts. out/extended-resume.md has a rich decision log (route cache: in-process LRU chosen
+  over Redis and nightly precompute) and roles at all three employers. out/answers.md answers all 23
+  built-in questions with sources; the mistake answer uses the August 2024 dispatch outage; no decoy
+  (candidate resume, HBR article, tax return, bank statement, offer letter) shows up; no number is
+  invented for the Tidewater claims launch; colleagues appear by role only.

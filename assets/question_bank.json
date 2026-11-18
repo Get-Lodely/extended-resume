@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "about": "23 canonical behavioral questions, deduplicated from 30 commonly reported interview prompts. Company-specific prompts (e.g. 'Why do you want to work at <Company>?') are excluded because they can't be answered from your history alone; add them as custom questions with company context if you need them.",
+  "removed_as_company_specific": ["Why do you want to work at Google?"],
+  "questions": [
+    {
+      "id": "tell-me-about-yourself",
+      "question": "Tell me about yourself.",
+      "variants": [],
+      "shape": "pitch",
+      "assesses": "A concise, relevant career narrative; communication; whether your path leads naturally to this role.",
+      "look_for": "Current role and scope, the through-line across roles, 2-3 strongest outcomes with numbers, what you want next (from motivation notes).",
+      "competencies": ["communication", "motivation"]
+    },
+    {
+      "id": "complex-problem",
+      "question": "Tell me about a time you solved a complex or difficult problem. How did you go about it?",
+      "variants": [
+        "Tell me about a time when you solved a complex problem and how you went about it.",
+        "Tell me about a time when you had to solve a difficult problem."
+      ],
+      "shape": "story",
+      "assesses": "Structured problem solving: framing, decomposition, hypotheses, persistence, judgment.",
+      "look_for": "Investigations, ambiguous problems, root-cause analyses, multi-step debugging or analysis where your reasoning is documented.",
+      "competencies": ["problem-solving", "ambiguity"]
+    },
+    {
+      "id": "technical-challenge",
+      "question": "Tell me about a technical challenge you overcame.",
+      "variants": ["Tell me about a technical challenge that you have overcome."],
+      "shape": "story",
+      "assesses": "Technical depth, tradeoff reasoning, ownership of a hard technical outcome.",
+      "look_for": "Design docs/RFCs, migrations, performance or reliability work, incidents you resolved; options considered and why one won.",
+      "competencies": ["technical-depth", "problem-solving"]
+    },
+    {
+      "id": "innovative-solution",
+      "question": "Tell me about a time you solved a problem in an innovative way.",
+      "variants": ["Tell me about a time when you solved a problem innovatively."],
+      "shape": "story",
+      "assesses": "Creativity, challenging assumptions, simplifying, finding a non-obvious approach.",
+      "look_for": "Reframed problems, tools or automation you built, process changes, unusual approaches that beat the obvious one.",
+      "competencies": ["innovation", "problem-solving"]
+    },
+    {
+      "id": "most-challenging-situation",
+      "question": "What is the most challenging situation you've faced in your career, and how did you handle it?",
+      "variants": ["Tell me about the most challenging situation you faced in your career and how you handled it."],
+      "shape": "story",
+      "assesses": "Resilience, composure and judgment under pressure; the scale of challenge you can handle.",
+      "look_for": "Crises, turnarounds, reorgs, major incidents, high-stakes launches, situations your journal shows were hard.",
+      "competencies": ["resilience", "ownership"]
+    },
+    {
+      "id": "proudest-project",
+      "question": "What is the project you are most proud of?",
+      "variants": [],
+      "shape": "story",
+      "assesses": "What you value, depth of ownership, impact, how you talk about your own work.",
+      "look_for": "High-impact work with a clearly personal contribution and some growth or difficulty; brag docs and self-reviews.",
+      "competencies": ["ownership", "impact"]
+    },
+    {
+      "id": "most-complex-project-led",
+      "question": "Tell me about the most complex project you have led.",
+      "variants": [],
+      "shape": "story",
+      "assesses": "Leadership of scope: planning, coordination across people and teams, risk management, execution.",
+      "look_for": "Multi-team or multi-quarter projects you drove: plans, dependencies, launch docs, status updates, how you kept it on track.",
+      "competencies": ["leadership", "execution"]
+    },
+    {
+      "id": "short-term-sacrifice",
+      "question": "Tell me about a time you made a short-term sacrifice for long-term gain.",
+      "variants": ["Tell me about a time when you made short-term sacrifices for long-term gains."],
+      "shape": "story",
+      "assesses": "Long-term thinking, ownership, judgment about tradeoffs.",
+      "look_for": "Tech-debt paydown, declining a quick hack, investing in tooling or tests, delaying a launch, giving up scope or credit; the measured payoff.",
+      "competencies": ["long-term-thinking", "ownership"]
+    },
+    {
+      "id": "calculated-risk-limited-data",
+      "question": "Tell me about a time you made a decision with limited data or took a calculated risk when speed was critical.",
+      "variants": [
+        "Tell me about a time you took a calculated risk when speed was critical.",
+        "Tell me about a time when you made a decision with limited data."
+      ],
+      "shape": "story",
+      "assesses": "Bias for action, reasoning under uncertainty, limiting downside (reversibility, rollback, staged rollout).",
+      "look_for": "Decisions under time pressure or incomplete information, experiments, two-way-door calls, rollback plans.",
+      "competencies": ["risk", "ambiguity", "data-driven"]
+    },
+    {
+      "id": "prioritization",
+      "question": "How do you prioritize your work? For example, if you had five projects at once, how would you decide?",
+      "variants": [
+        "How do you prioritize tasks?",
+        "If you had to work on five different projects, how would you prioritize them?"
+      ],
+      "shape": "approach+example",
+      "assesses": "A real prioritization method, impact vs. effort thinking, communicating tradeoffs, saying no.",
+      "look_for": "Planning docs, OKRs, triage notes, explicit deprioritizations and how you communicated them.",
+      "competencies": ["prioritization", "communication"]
+    },
+    {
+      "id": "stakeholder-alignment",
+      "question": "Tell me about a time you dealt with conflicting priorities between stakeholders. How did you get alignment?",
+      "variants": ["Tell me about a time when you had to deal with conflicting priorities with your stakeholders and how you secured alignment with them."],
+      "shape": "story",
+      "assesses": "Influence without authority, negotiation, framing tradeoffs, driving to a decision.",
+      "look_for": "Roadmap conflicts, competing asks from teams or leaders, escalations, decision meetings you ran.",
+      "competencies": ["stakeholder-management", "influence"]
+    },
+    {
+      "id": "tight-deadline",
+      "question": "Tell me about a time you worked on a project with a tight deadline.",
+      "variants": ["Tell me about a time when you worked on a project with a tight deadline."],
+      "shape": "story",
+      "assesses": "Planning and scoping under pressure, focus, quality tradeoffs, keeping people informed.",
+      "look_for": "Launches against fixed dates (regulatory, contractual, events), scope cuts, crunch plans, retros.",
+      "competencies": ["execution", "deadline", "prioritization"]
+    },
+    {
+      "id": "missed-deadline",
+      "question": "Tell me about a time you missed a deadline.",
+      "variants": ["Tell me about a time when you missed a deadline."],
+      "shape": "story",
+      "assesses": "Ownership, raising risk early, recovery, what you changed afterward.",
+      "look_for": "Slips, re-plans, delayed launches; feedback about late risk flagging; retros.",
+      "competencies": ["ownership", "failure", "communication"]
+    },
+    {
+      "id": "mistake-failure",
+      "question": "Tell me about a time you made a mistake or failed. What would you do differently?",
+      "variants": [
+        "Tell me about a time you made a mistake.",
+        "Tell me about a time you failed. What would you have done differently?"
+      ],
+      "shape": "story",
+      "assesses": "Self-awareness, ownership without excuses, learning, systemic fixes.",
+      "look_for": "Postmortems where you caused or contributed to the problem, wrong bets, action items you drove afterward.",
+      "competencies": ["failure", "ownership", "growth"]
+    },
+    {
+      "id": "negative-feedback",
+      "question": "Tell me about a time you received negative feedback. How did you handle it?",
+      "variants": ["Tell me about a time when you received negative feedback and how you handled it."],
+      "shape": "story",
+      "assesses": "Coachability, emotional maturity, concrete behavior change.",
+      "look_for": "Performance reviews, 1:1 notes, peer feedback with criticism, and later evidence that you changed.",
+      "competencies": ["feedback", "growth"]
+    },
+    {
+      "id": "conflict",
+      "question": "Tell me about a time you had a conflict or disagreement with someone. How did you resolve it, and what did you learn?",
+      "variants": [
+        "Tell me about a time you disagreed with someone and how you resolved it.",
+        "Tell me about a time you had a conflict with someone. How did you resolve it and what did you learn?",
+        "Can you provide an example of how you manage conflict?"
+      ],
+      "shape": "story",
+      "assesses": "Empathy, listening, using data, finding resolution while keeping the relationship.",
+      "look_for": "Design debates, disagreements recorded in docs or 1:1 notes, compromises, disagree-and-commit moments.",
+      "competencies": ["conflict", "collaboration", "communication"]
+    },
+    {
+      "id": "disagree-with-manager",
+      "question": "Tell me about a time you disagreed with your manager.",
+      "variants": ["Tell me about a time when you had a disagreement with your manager."],
+      "shape": "story",
+      "assesses": "Courage to push back respectfully, reasoning with evidence, disagree-and-commit.",
+      "look_for": "1:1 notes, proposals that countered a manager's plan, escalations, outcomes.",
+      "competencies": ["conflict", "influence", "communication"]
+    },
+    {
+      "id": "difficult-person",
+      "question": "Tell me about a time you dealt with a difficult person at work.",
+      "variants": ["Tell me about a time when you dealt with a difficult person at work."],
+      "shape": "story",
+      "assesses": "Professionalism, empathy, boundary-setting, keeping focus on the outcome.",
+      "look_for": "Recurring friction in journal or 1:1 notes, how you changed the working relationship, results.",
+      "competencies": ["conflict", "collaboration", "resilience"]
+    },
+    {
+      "id": "cross-functional",
+      "question": "Describe an experience working on a cross-functional team.",
+      "variants": ["Describe an experience working in a cross-functional team."],
+      "shape": "story",
+      "assesses": "Collaboration across disciplines, shared goals, translating between functions.",
+      "look_for": "Projects with product, design, data, sales, legal, compliance or operations partners; your role in bridging them.",
+      "competencies": ["cross-functional", "collaboration", "communication"]
+    },
+    {
+      "id": "earn-trust",
+      "question": "How do you earn the trust of your team members?",
+      "variants": [],
+      "shape": "approach+example",
+      "assesses": "Reliability, transparency, care for others, following through.",
+      "look_for": "Joining a new team, mentoring, owning mistakes openly, keeping commitments, feedback that mentions trust.",
+      "competencies": ["leadership", "collaboration", "mentoring"]
+    },
+    {
+      "id": "strengths-weaknesses",
+      "question": "What are your strengths and weaknesses?",
+      "variants": [],
+      "shape": "self-assessment",
+      "assesses": "Self-awareness backed by evidence; honesty about a real weakness and what you're doing about it.",
+      "look_for": "Praise that recurs across reviews (strengths), criticism that recurs (weakness), and steps you've taken since.",
+      "competencies": ["feedback", "growth"]
+    },
+    {
+      "id": "why-not-hire",
+      "question": "Why should we not hire you?",
+      "variants": ["Why do you think we should not hire you?"],
+      "shape": "self-assessment",
+      "assesses": "Honesty and composure; awareness of genuine gaps relative to the role and how you mitigate them.",
+      "look_for": "Real gaps versus the target role, working-style preferences, growth areas from reviews, mitigation already underway.",
+      "competencies": ["growth", "communication"]
+    },
+    {
+      "id": "why-switch-now",
+      "question": "Why do you want to switch jobs now?",
+      "variants": [],
+      "shape": "motivation",
+      "assesses": "Positive, forward-looking motivation that fits your career arc; no badmouthing.",
+      "look_for": "Career-planning notes, journal reflections about what energizes you and what you want next; confirm with the person.",
+      "competencies": ["motivation"],
+      "needs_user_input": true
+    }
+  ]
+}
